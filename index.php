@@ -1,4 +1,4 @@
-xs<?php 
+<?php 
 session_start();
 if (isset($_SESSION['email'])) {
   # code...
@@ -55,11 +55,6 @@ else{
 
 <body>
     
-
-
-
-
-
     <div class="header">
         <div class="container">
             <div class="row">
@@ -119,6 +114,11 @@ else{
                             <li>
                                 <a href="#">About Us</a>
                             </li>
+                            <li>
+                                <a href="login.php" class="btn btn-default btn-sm" style="font-family:open sans;">
+                                <i class="fas fa-user-circle"></i> Login
+                                </a>
+                            </li>
 
                         </ul>
                     </div>
@@ -126,15 +126,18 @@ else{
             </div>
         </div>
     </div>
+
+    
+
     <div id="slider" class="owl-carousel owl-theme slider">
         <div class="item">
-            <div class="slider-pic"><img src="images/ring1.jpg" alt="Mirror Edge"></div>
+            <div class="slider-pic"><img src="images/slider1.jpg" alt="Mirror Edge"></div>
         </div>
         <div class="item">
-            <div class="slider-pic"><img src="images/ring2.jpg" alt="Wedding couple pic"></div>
+            <div class="slider-pic"><img src="images/slider2.jpg" alt="Wedding couple pic"></div>
         </div>
         <div class="item">
-            <div class="slider-pic"><img src="images/ring3.jpg" alt="The Last of us"></div>
+            <div class="slider-pic"><img src="images/slider3.jpg" alt="The Last of us"></div>
         </div>
     </div>
     <div class="find-section">
@@ -602,7 +605,7 @@ else{
 
 
     <div class="bg-video-wrap">
-        <video src="videowedding.mp4" loop muted autoplay>
+        <video width="1920" height="1080" src="videowedding.mp4" loop muted autoplay>
         </video>
         <div class="overlay">
         </div>
@@ -677,7 +680,7 @@ else{
                         </div>
 
                         <div class=" d-flex justify-content-center">
-                            <p><a class="btn btn-warning" href="#">Add Property</a></p>
+                            <p><a class="btn btn-danger" href="#">Add Property</a></p>
                         </div>
                     </div>
                 </div>

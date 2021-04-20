@@ -38,6 +38,10 @@ if(isset($_POST['reg_user'])){
     if($user){
         if($user['EMAIL'] === $email){
             array_push($errors, "EMAIL ALREADY EXITS");
+            // echo"(<script LANGUAGE='JavaScript'>
+            // window.alert('EMAIL ALREADY EXITS');
+            // window.location.href='signup.php'
+            // </script>)";
         }
     }
 
@@ -48,7 +52,7 @@ if(isset($_POST['reg_user'])){
 
         $_SESSION['email'] = $email;
         $_SESSION['success'] = "You are now logged in";
-        header('location: index-2.php');
+        header('location: index.php');
     }
     include 'errors.php';
 }
@@ -67,6 +71,11 @@ if(isset($_POST['login_user'])){
         $_SESSION['success'] = "You are now logged in";
         header('location: index.php');
       //  $_SESSION['user'] = $login_user;
+    }
+    // if admin login
+    elseif($email == 'admin@123' && $password == 'admin123'){
+        $_SESSION['email'] = $email;
+        header('location:admin/dashboard.php');
     }
     else{
        // array_push($errors, "Wrong username/password combination");
